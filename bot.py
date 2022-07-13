@@ -18,9 +18,9 @@ client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 anlik_calisan = []
 
-# Əkmə Oğlum...!!!
+# he saol
 emj = ['😇','🥰','😎','😮‍💨','😍','👾','🤡','🥳','😻','😼','😽','💋','👸','🤴','🎅🏻','🤶','🧞‍♀️','🧞','🧞‍♂️','🧜‍♀️','🧜','🧚‍♀️','🧚','👑','💍','🕶','🐶','🐱','🐭','🐹','🐰','🦊','🐻','🐼','🐨','🐯','🦁','🐮','🐷','🐽','🐸','🐵','🙈','🙉','🙊','🐒','🐣','🐥','🦅','🐝','🦋','🐞','💐','🌹','🥀','🌺','🌸','🌼','🌻','⭐️','🌟','✨','⚡️','🔥','🌈','☃️','🍫','💅','🐺','🍫','🍕','☕','🧸','🦅','👩‍🦰','🎮','☄️','🌙','🦕','👨🏻‍✈️','🥶','🍿','👀','💀','💟','♥️','❤️‍🩹','💝','💗','💙','💛','❤️‍🔥','🤑','⚡','😈','🤡','🎊','🔥','😼','💤','✊','👩‍🎨','🧕','🌼','💐','🌹','🥀','🌷','🌺','🌸','🏵️','🌻','🍂','🍁','🌾','🌱','🌿','🍃','☘️','🍀','🌵','🌴','🌳','🌲','🏞️','🌪️','☃️','⛄','❄️','🏔️','🌋','🙋','🤶','👩‍💼','🧓','🧔','💃','🕺','👩‍🦰','🪐','🦄','🐢','🐁','🐤','🐣','🐥','🦉','🐓','🕊️','🦢','🦩','🦈','🐬','🐋','🐳','🐟','🐠','🦚','🐡','🦐','🦞','🦀','🦑','🐙','🦂','🕷️','🕸️','🐜','🦗','🦟','🐝','🐞','🐾','🍓','🍒','🍎','🍉','🍊','🥭','🍍','🍋','🍇','🥝','🍐','🥥','🌶️','🍄','🍔','🧆','🥙','🦞','🍧','🍨','🍦','🥧','🍰','🍮','🎂','🧁','🍭','🍬','🍩','🍺','🍻','🥂','🍾','🍷']
-# Əkmə Oğlum...!!!
+# he saol
 
 @client.on(events.NewMessage(pattern='^(?i)/dur'))
 async def cancel(event):
@@ -30,11 +30,11 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**ZezelandTaggerBot**, Qrupda və ya kanalda demək olar ki, hər bir üzvü qeyd edə bilərəm 🤓\nDaha ətraflı məlumat üçün **/help**'yazın.",
+  await event.reply("**ECtaggerbot**, Qrupda və ya kanalda demək olar ki, hər bir üzvü qeyd edə bilərəm 🤓\nDaha ətraflı məlumat üçün **/help**'yazın.",
                     buttons=(
-                      [Button.url('➕ Gurup Eklə', 'http://t.me/ZezeLandTaggerBot?startgroup=a'),
-                      Button.url('⚕️ Qrup', 'https://t.me/ZeZeLandSohbet'),
-                      Button.url('👨🏻‍💻 Sahibim', 'https://t.me/coolnorman')]
+                      [Button.url('➕ Gurup Eklə', 'http://t.me/ECtagger_bot?startgroup=a'),
+                      Button.url('⚕️ Qrup', 'https://t.me/wulzi9'),
+                      Button.url('👨🏻‍💻 Sahibim', 'https://t.me/wulzi9')]
                     ),
                     link_preview=False
                    )
@@ -43,9 +43,9 @@ async def help(event):
   helptext = "**ZezelandTaggerBot'un Kömək Menyusu**\n\nƏmirlər: /tag \nBu əmri başqalarına demək istədiyiniz mətnlə birlikdə istifadə edə bilərsiniz. \nEmoji tag: /etag'Bu əmri cavab olaraq istifadə edə bilərsiniz. istənilən mesaj Bot istifadəçiləri cavab mesajına işarələyəcək"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('➕ Gurup Eklə', 'http://t.me/ZezeLandTaggerBot?startgroup=a'),
-                       Button.url('⚕️ Qrup', 'https://t.me/ZeZeLandSohbet'),
-                      Button.url('👨🏻‍💻 Sahibim', 'https://t.me/coolnorman')]
+                      [Button.url('➕ Gurup Eklə', 'http://t.me/ECtagger_bot?startgroup=a'),
+                       Button.url('⚕️ Qrup', 'https://t.me/wulzi9'),
+                      Button.url('👨🏻‍💻 Sahibim', 'https://t.me/wulzi9')]
                     ),
                     link_preview=False
                    )
@@ -55,7 +55,7 @@ async def help(event):
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("__Yalnızca yöneticiler hepsinden bahsedebilir!__")
+    return await event.respond("__Yalnızca adminler hamisindan bahsedebilir!__")
    
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -103,7 +103,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum 🤓")
+        await event.respond("Diaandim :) 🤓")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -111,7 +111,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-# Emoji Modulu (aykhan_s) .
+# Emoji Modulu (wulzi9) .
 @client.on(events.NewMessage(pattern="^/etag ?(.*)"))
 async def etag(event):
   global anlik_calisan
@@ -145,7 +145,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emj)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum 🤓")
+        await event.respond("Diaaandim 🤓")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -163,7 +163,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emj)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum 🤓")
+        await event.respond("Diaandim 🤓")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -171,5 +171,5 @@ async def etag(event):
         usrnum = 0
         usrtxt = ""
 
-print(">> Bot rahat çalışır narahat olmayın 🚀 @BLACK_MMC Məlumat ala bilərsiniz <<")
+print(">> Bot rahat çalışır narahat olmayın 🚀 @WULZI9 Məlumat ala bilərsiniz <<")
 client.run_until_disconnected()
